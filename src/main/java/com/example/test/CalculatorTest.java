@@ -1,13 +1,14 @@
-package com.example.onion;
+package com.example.test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CalculatorTest {
+import com.example.calculator.Calculator;
 
+public class CalculatorTest {
     private Calculator cal;
 
     @Before //초기화 작업
