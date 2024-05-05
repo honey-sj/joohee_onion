@@ -12,18 +12,16 @@ public class StringCalculator {
             return 0;
         }
 
-        String[] strArr = null;
+        return sum(toInts(split(str)));
+    }
 
-        Matcher m = getMatcher(str);
-
-        if (m.find()){
+    private String[] split(String text){
+        Matcher m = getMatcher(text);
+        if(m.find()){
             String s1 = m.group(1);
-            strArr = m.group(2).split(s1);
-        } else {
-            strArr = getSplit(str);
+            return m.group(2).split(s1);
         }
-
-        return sum(toInts(strArr));
+        return getSplit(text);
     }
 
     private static Matcher getMatcher(String str) {
